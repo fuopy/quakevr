@@ -50,6 +50,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #include <SDL2/SDL.h>
 
 #pragma comment(lib, "dbgeng.lib")
+// Boost temporarily disabled --f
 //#define BOOST_STACKTRACE_USE_WINDBG
 //#include <boost/stacktrace.hpp>
 #include <iostream>
@@ -388,6 +389,7 @@ static const char errortxt2[] = "\nQUAKE ERROR: ";
 
 void Sys_Error(const char* error, ...)
 {
+    // Boost temporarily disabled --f
     //std::cout << "Stacktrace:\n"
     //          << boost::stacktrace::stacktrace() << std::endl;
 
