@@ -546,7 +546,7 @@ void CL_TimeDemo_f();
 //
 void CL_ParseServerMessage();
 void CL_RegisterParticles(); // QSS
-void CL_NewTranslation(int slot);
+static void CL_NewTranslation(int slot);
 
 //
 // view

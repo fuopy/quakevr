@@ -52,7 +52,7 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 #include <SDL2/SDL.h>
 
-#include <boost/stacktrace.hpp>
+//#include <boost/stacktrace.hpp>
 #include <iostream>
 
 bool isDedicated;
@@ -394,8 +394,8 @@ static const char errortxt2[] = "\nQUAKE ERROR: ";
 
 void Sys_Error(const char* error, ...)
 {
-    std::cout << "Stacktrace:\n"
-              << boost::stacktrace::stacktrace() << std::endl;
+//    std::cout << "Stacktrace:\n"
+//              << boost::stacktrace::stacktrace() << std::endl;
 
     va_list argptr;
     char text[1024];

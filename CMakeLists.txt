@@ -23,6 +23,7 @@ set(source_list
     "Quake/cvar.cpp"
     "Quake/developer.cpp"
     "Quake/fakeqcvm.cpp"
+    "Quake/qcvm.cpp"
     "Quake/fs_zip.cpp"
     "Quake/fshandle.cpp"
     "Quake/gl_draw.cpp"
@@ -244,7 +245,7 @@ else()
     # PKG_SEARCH_MODULE(OPENVR REQUIRED openvr)
 
     set(OPENVR_LIBRARIES
-        "/home/vittorioromeo/Repos/openvr/bin/linux64/libopenvr_api.so"
+        "/usr/lib/x86_64-linux-gnu/libopenvr_api.so"
     )
 
     find_package(GLEW REQUIRED)
@@ -253,7 +254,7 @@ else()
     endif()
 
     target_link_libraries(${QUAKEVR_TARGET_NAME}
-        asan ${OPENGL_gl_LIBRARY} SDL2::SDL2 ${OPENVR_LIBRARIES} ${GLEW_LIBRARIES} opus FLAC ogg mad mikmod vorbis vorbisfile opusfile mpg123
+        asan ${OPENGL_gl_LIBRARY} SDL2::SDL2 ${OPENVR_LIBRARIES} ${GLEW_LIBRARIES} opus FLAC ogg mad mikmod vorbis vorbisfile opusfile mpg123 dl
     )
 endif()
 
